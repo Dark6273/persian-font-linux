@@ -5,8 +5,14 @@ This script, install persian fonts on any linux distro.
 ```
 git clone https://github.com/Dark6273/persian-font-linux.git
 cd persian-font-linux
+chmod +x install.sh
 ./install.sh
 ```
+
+### Contact us
+#### [Telegram](https://t.me/HzZz_Mahdi_zZzH)
+#### [Gmail](mailto:mahdi.khosravi6273@gmail.com)
+
 
 ## Available fonts
  - A06YB
