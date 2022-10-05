@@ -1,8 +1,8 @@
 # install fonts for linux
-echo "Do you want all fonts to be installed? (y)"
+echo "Choose the option you want \n  [1] - fonts list \n  [2] - install fonts \n ->"
 read status
 
-if [ "$status" = "y" ];then
+if [ "$status" -eq 2 ];then
 	# extract fonts file (tar/gzip)
     echo "extract file"
     tar -xf fonts.tar.gz
@@ -22,6 +22,17 @@ if [ "$status" = "y" ];then
 
 	# remove fonts folder
     rm -r fonts
+
+elif [ "$status" -eq 1 ];then
+	# extract fonts file (tar/gzip)
+	echo "extract file"
+	tar -xf fonts.tar.gz
+
+	for font in `ls fonts/`;
+		do
+			f=`echo $font | cut -d "." -f1`
+			echo " -> $f"
+		done
 
 else
     echo "Good bye!"
